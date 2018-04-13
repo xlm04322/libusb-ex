@@ -1,0 +1,212 @@
+---- libusb_interrupt_transfer Matches (8 in 6 files) ----
+Dpfp.c (examples):	r = libusb_interrupt_transfer(devh, EP_INTR, data, INTR_LENGTH,
+Dpfp_threaded.c (examples):	r = libusb_interrupt_transfer(devh, EP_INTR, data, INTR_LENGTH,
+Libusb-1.0.def (libusb):  libusb_interrupt_transfer
+Libusb-1.0.def (libusb):  libusb_interrupt_transfer@24 = libusb_interrupt_transfer
+Libusb.h (libusb):int LIBUSB_CALL libusb_interrupt_transfer(libusb_device_handle *dev_handle,
+Sync.c (libusb):int API_EXPORTED libusb_interrupt_transfer(
+Xusb.c (examples):		r = libusb_interrupt_transfer(handle, endpoint_in, report_buffer, size, &size, 5000);
+---- libusb_get_config_descriptor Matches (9 in 5 files) ----
+Descriptor.c (libusb):int API_EXPORTED libusb_get_config_descriptor(libusb_device *dev,
+Descriptor.c (libusb):		return libusb_get_config_descriptor(dev, (uint8_t) idx, config);
+Libusb-1.0.def (libusb):  libusb_get_config_descriptor
+Libusb-1.0.def (libusb):  libusb_get_config_descriptor@12 = libusb_get_config_descriptor
+Libusb.h (libusb):int LIBUSB_CALL libusb_get_config_descriptor(libusb_device *dev,
+Windows_usb.c (libusb\os):	r = libusb_get_config_descriptor(dev_handle->dev, (uint8_t)(priv->active_config-1), &conf_desc);
+Windows_usb.c (libusb\os):		r = libusb_get_config_descriptor(transfer->dev_handle->dev, (uint8_t)(priv->active_config-1), &conf_desc);
+Xusb.c (examples):	CALL_CHECK(libusb_get_config_descriptor(dev, 0, &conf_desc));
+---- union Matches (10 in 6 files) ----
+Core.c (libusb):	union {
+Haiku_usb_raw.h (libusb\os\haiku):typedef union {
+Libusb.h (libusb):	union {
+Linux_usbfs.c (libusb\os):	union {
+Linux_usbfs.h (libusb\os):	union {
+Windows_usb.h (libusb\os):	union {
+Windows_usb.h (libusb\os):	union {
+Windows_usb.h (libusb\os):typedef union _USB_PROTOCOLS {
+Windows_usb.h (libusb\os):typedef union _USB_NODE_CONNECTION_INFORMATION_EX_V2_FLAGS {
+Windows_usb.h (libusb\os):	union {
+---- pthread Matches (3 in 3 files) ----
+Darwin_usb.c (libusb\os):#include <pthread.h>
+Dpfp_threaded.c (examples):#include <pthread.h>
+Threads_posix.h (libusb\os):#include <pthread.h>
+---- __android_log Matches (1 in 1 files) ----
+Core.c (libusb):	__android_log_write(priority, "libusb", str);
+---- LIBUSB_TRANSFER_TYPE_ISOCHRONOUS Matches (20 in 10 files) ----
+Core.c (f:\libusb-1.0.20\libusb):	if (ep_type == LIBUSB_TRANSFER_TYPE_ISOCHRONOUS
+Darwin_usb.c (f:\libusb-1.0.20\libusb\os):  case LIBUSB_TRANSFER_TYPE_ISOCHRONOUS:
+Darwin_usb.c (f:\libusb-1.0.20\libusb\os):  case LIBUSB_TRANSFER_TYPE_ISOCHRONOUS:
+Darwin_usb.c (f:\libusb-1.0.20\libusb\os):  if (transfer->type == LIBUSB_TRANSFER_TYPE_ISOCHRONOUS && tpriv->isoc_framelist) {
+Darwin_usb.c (f:\libusb-1.0.20\libusb\os):  int isIsoc      = LIBUSB_TRANSFER_TYPE_ISOCHRONOUS == transfer->type;
+Haiku_usb_backend.cpp (f:\libusb-1.0.20\libusb\os\haiku):		case LIBUSB_TRANSFER_TYPE_ISOCHRONOUS:
+Libusb.h (f:\libusb-1.0.20\libusb):	LIBUSB_TRANSFER_TYPE_ISOCHRONOUS = 1,
+Libusb.h (f:\libusb-1.0.20\libusb):	transfer->type = LIBUSB_TRANSFER_TYPE_ISOCHRONOUS;
+Linux_usbfs.c (f:\libusb-1.0.20\libusb\os):		if (LIBUSB_TRANSFER_TYPE_ISOCHRONOUS == transfer->type)
+Linux_usbfs.c (f:\libusb-1.0.20\libusb\os):	case LIBUSB_TRANSFER_TYPE_ISOCHRONOUS:
+Linux_usbfs.c (f:\libusb-1.0.20\libusb\os):	case LIBUSB_TRANSFER_TYPE_ISOCHRONOUS:
+Linux_usbfs.c (f:\libusb-1.0.20\libusb\os):	case LIBUSB_TRANSFER_TYPE_ISOCHRONOUS:
+Netbsd_usb.c (f:\libusb-1.0.20\libusb\os):	case LIBUSB_TRANSFER_TYPE_ISOCHRONOUS:
+Openbsd_usb.c (f:\libusb-1.0.20\libusb\os):	case LIBUSB_TRANSFER_TYPE_ISOCHRONOUS:
+Sam3u_benchmark.c (f:\libusb-1.0.20\examples):	if (xfr->type == LIBUSB_TRANSFER_TYPE_ISOCHRONOUS) {
+Wince_usb.c (f:\libusb-1.0.20\libusb\os):	case LIBUSB_TRANSFER_TYPE_ISOCHRONOUS:
+Wince_usb.c (f:\libusb-1.0.20\libusb\os):	case LIBUSB_TRANSFER_TYPE_ISOCHRONOUS:
+Windows_usb.c (f:\libusb-1.0.20\libusb\os):	case LIBUSB_TRANSFER_TYPE_ISOCHRONOUS:
+Windows_usb.c (f:\libusb-1.0.20\libusb\os):	case LIBUSB_TRANSFER_TYPE_ISOCHRONOUS:
+Windows_usb.c (f:\libusb-1.0.20\libusb\os):	case LIBUSB_TRANSFER_TYPE_ISOCHRONOUS:
+---- do_sync_bulk_transfer Matches (3 in 1 files) ----
+Sync.c (f:\libusb-1.0.20\libusb):static int do_sync_bulk_transfer(struct libusb_device_handle *dev_handle,
+Sync.c (f:\libusb-1.0.20\libusb):	return do_sync_bulk_transfer(dev_handle, endpoint, data, length,
+Sync.c (f:\libusb-1.0.20\libusb):	return do_sync_bulk_transfer(dev_handle, endpoint, data, length,
+---- _android_log_print Matches (3 in 1 files) ----
+Libcdrom.c (f:\libusb-1.0.20\libcdrom):		_android_log_print(ANDROID_LOG_ERROR,"cdrom-jni","fd fd_dup[%d, %d]\n",fd,fd_dup);
+Libcdrom.c (f:\libusb-1.0.20\libcdrom):			_android_log_print(ANDROID_LOG_ERROR,"cdrom-jni","fd_dup failed !\n");
+Libcdrom.c (f:\libusb-1.0.20\libcdrom):			_android_log_print(ANDROID_LOG_ERROR,"cdrom-jni","fd_dup success !\n");
+---- endpoint_in Matches (61 in 3 files) ----
+Libcdrom.c (f:\libusb-1.0.20\libcdrom):static void get_sense(libusb_device_handle *handle, uint8_t endpoint_in, uint8_t endpoint_out);
+Libcdrom.c (f:\libusb-1.0.20\libcdrom):static int cmd_scsi_inquiry(libusb_device_handle *handle, uint8_t endpoint_in,uint8_t endpoint_out, uint8_t lun)
+Libcdrom.c (f:\libusb-1.0.20\libcdrom):	ret = libusb_bulk_transfer(handle, endpoint_in, (unsigned char*)&buffer, INQUIRY_LENGTH, &size, 1000);
+Libcdrom.c (f:\libusb-1.0.20\libcdrom):	if (get_mass_storage_status(handle, endpoint_in, expected_tag) == -2) {
+Libcdrom.c (f:\libusb-1.0.20\libcdrom):		get_sense(handle, endpoint_in, endpoint_out);
+Libcdrom.c (f:\libusb-1.0.20\libcdrom):		ret = libusb_bulk_transfer(handle, endpoint_in, (unsigned char*)&buffer, INQUIRY_LENGTH, &size, 1000);
+Libcdrom.c (f:\libusb-1.0.20\libcdrom):		if (get_mass_storage_status(handle, endpoint_in, expected_tag) == -2) {
+Libcdrom.c (f:\libusb-1.0.20\libcdrom):			get_sense(handle, endpoint_in, endpoint_out);
+Libcdrom.c (f:\libusb-1.0.20\libcdrom):static int cmd_scsi_start_stop_unit(libusb_device_handle *handle, uint8_t endpoint_in,uint8_t endpoint_out, uint8_t lun)
+Libcdrom.c (f:\libusb-1.0.20\libcdrom):	if (get_mass_storage_status(handle, endpoint_in, expected_tag) == -2) {
+Libcdrom.c (f:\libusb-1.0.20\libcdrom):		get_sense(handle, endpoint_in, endpoint_out);
+Libcdrom.c (f:\libusb-1.0.20\libcdrom):static int cmd_scsi_read_cd(libusb_device_handle *handle, uint8_t endpoint_in,uint8_t endpoint_out, uint8_t lun, 
+Libcdrom.c (f:\libusb-1.0.20\libcdrom):		libusb_bulk_transfer(handle, endpoint_in, buffer, track_read_size, &size, 5000);
+Libcdrom.c (f:\libusb-1.0.20\libcdrom):		if (get_mass_storage_status(handle, endpoint_in, expected_tag) == -2) {
+Libcdrom.c (f:\libusb-1.0.20\libcdrom):			get_sense(handle, endpoint_in, endpoint_out);
+Libcdrom.c (f:\libusb-1.0.20\libcdrom):static int cmd_scsi_read_capacity(libusb_device_handle *handle, uint8_t endpoint_in,uint8_t endpoint_out, uint8_t lun)
+Libcdrom.c (f:\libusb-1.0.20\libcdrom):	ret = libusb_bulk_transfer(handle, endpoint_in, (unsigned char*)&buffer, READ_CAPACITY_LENGTH, &size, 1000);
+Libcdrom.c (f:\libusb-1.0.20\libcdrom):	if (get_mass_storage_status(handle, endpoint_in, expected_tag) == -2) {
+Libcdrom.c (f:\libusb-1.0.20\libcdrom):		get_sense(handle, endpoint_in, endpoint_out);
+Libcdrom.c (f:\libusb-1.0.20\libcdrom):static int cmd_scsi_read_disc_information(libusb_device_handle *handle, uint8_t endpoint_in,uint8_t endpoint_out, uint8_t lun)
+Libcdrom.c (f:\libusb-1.0.20\libcdrom):static int cmd_scsi_read_toc_pma_atip(libusb_device_handle *handle, uint8_t endpoint_in,uint8_t endpoint_out, uint8_t lun,
+Libcdrom.c (f:\libusb-1.0.20\libcdrom):	libusb_bulk_transfer(handle, endpoint_in, data, cdb[7]<<8|cdb[8], &size, 5000);
+Libcdrom.c (f:\libusb-1.0.20\libcdrom):	if (get_mass_storage_status(handle, endpoint_in, expected_tag) == -2) 
+Libcdrom.c (f:\libusb-1.0.20\libcdrom):		get_sense(handle, endpoint_in, endpoint_out);
+Libcdrom.c (f:\libusb-1.0.20\libcdrom):			ret = cmd_scsi_read_cd(cdrom_para.handle, cdrom_para.endpoint_in, cdrom_para.endpoint_out, cdrom_para.lun, i,  (block_len+start_block_add-i),  buffer,  buffer_len);
+Libcdrom.c (f:\libusb-1.0.20\libcdrom):			ret = cmd_scsi_read_cd(cdrom_para.handle, cdrom_para.endpoint_in, cdrom_para.endpoint_out, cdrom_para.lun, i,  READ_BLOCKS_ONETIME,  buffer,  buffer_len);
+Libcdrom.c (f:\libusb-1.0.20\libcdrom):static int test_unit_ready_command(libusb_device_handle *handle, uint8_t endpoint_in,uint8_t endpoint_out, uint8_t lun)
+Libcdrom.c (f:\libusb-1.0.20\libcdrom):	if (get_mass_storage_status(handle, endpoint_in, expected_tag) == -2) {
+Libcdrom.c (f:\libusb-1.0.20\libcdrom):		get_sense(handle, endpoint_in, endpoint_out);
+Libcdrom.c (f:\libusb-1.0.20\libcdrom):static void get_sense(libusb_device_handle *handle, uint8_t endpoint_in, uint8_t endpoint_out)
+Libcdrom.c (f:\libusb-1.0.20\libcdrom):	rc = libusb_bulk_transfer(handle, endpoint_in, (unsigned char*)&sense, REQUEST_SENSE_LENGTH, &size, 1000);
+Libcdrom.c (f:\libusb-1.0.20\libcdrom):	get_mass_storage_status(handle, endpoint_in, expected_tag);
+Libcdrom.c (f:\libusb-1.0.20\libcdrom):	uint8_t endpoint_in = 0, endpoint_out = 0;	// default IN and OUT endpoints
+Libcdrom.c (f:\libusb-1.0.20\libcdrom):						if (!endpoint_in)
+Libcdrom.c (f:\libusb-1.0.20\libcdrom):							endpoint_in = endpoint->bEndpointAddress;
+Libcdrom.c (f:\libusb-1.0.20\libcdrom):			cdrom_para.endpoint_in = endpoint_in;
+Libcdrom.c (f:\libusb-1.0.20\libcdrom):			cmd_scsi_read_toc_pma_atip(cdrom_para.handle, cdrom_para.endpoint_in, cdrom_para.endpoint_out, cdrom_para.lun,
+Libcdrom.c (f:\libusb-1.0.20\libcdrom):			cmd_scsi_read_toc_pma_atip(cdrom_para.handle, cdrom_para.endpoint_in, cdrom_para.endpoint_out, cdrom_para.lun,
+Libcdrom.h (f:\libusb-1.0.20\libcdrom):	uint8_t			endpoint_in;
+Xusb.c (f:\libusb-1.0.20\examples):static void get_sense(libusb_device_handle *handle, uint8_t endpoint_in, uint8_t endpoint_out)
+Xusb.c (f:\libusb-1.0.20\examples):	rc = libusb_bulk_transfer(handle, endpoint_in, (unsigned char*)&sense, REQUEST_SENSE_LENGTH, &size, 1000);
+Xusb.c (f:\libusb-1.0.20\examples):	get_mass_storage_status(handle, endpoint_in, expected_tag);
+Xusb.c (f:\libusb-1.0.20\examples):static int test_mass_storage(libusb_device_handle *handle, uint8_t endpoint_in, uint8_t endpoint_out)
+Xusb.c (f:\libusb-1.0.20\examples):	CALL_CHECK(libusb_bulk_transfer(handle, endpoint_in, (unsigned char*)&buffer, INQUIRY_LENGTH, &size, 1000));
+Xusb.c (f:\libusb-1.0.20\examples):	if (get_mass_storage_status(handle, endpoint_in, expected_tag) == -2) {
+Xusb.c (f:\libusb-1.0.20\examples):		get_sense(handle, endpoint_in, endpoint_out);
+Xusb.c (f:\libusb-1.0.20\examples):	CALL_CHECK(libusb_bulk_transfer(handle, endpoint_in, (unsigned char*)&buffer, READ_CAPACITY_LENGTH, &size, 1000));
+Xusb.c (f:\libusb-1.0.20\examples):	if (get_mass_storage_status(handle, endpoint_in, expected_tag) == -2) {
+Xusb.c (f:\libusb-1.0.20\examples):		get_sense(handle, endpoint_in, endpoint_out);
+Xusb.c (f:\libusb-1.0.20\examples):	libusb_bulk_transfer(handle, endpoint_in, data, block_size, &size, 5000);
+Xusb.c (f:\libusb-1.0.20\examples):	if (get_mass_storage_status(handle, endpoint_in, expected_tag) == -2) {
+Xusb.c (f:\libusb-1.0.20\examples):		get_sense(handle, endpoint_in, endpoint_out);
+Xusb.c (f:\libusb-1.0.20\examples):static int test_hid(libusb_device_handle *handle, uint8_t endpoint_in)
+Xusb.c (f:\libusb-1.0.20\examples):		printf("\nTesting interrupt read using endpoint %02X...\n", endpoint_in);
+Xusb.c (f:\libusb-1.0.20\examples):		r = libusb_interrupt_transfer(handle, endpoint_in, report_buffer, size, &size, 5000);
+Xusb.c (f:\libusb-1.0.20\examples):	uint8_t endpoint_in = 0, endpoint_out = 0;	// default IN and OUT endpoints
+Xusb.c (f:\libusb-1.0.20\examples):						if (!endpoint_in)
+Xusb.c (f:\libusb-1.0.20\examples):							endpoint_in = endpoint->bEndpointAddress;
+Xusb.c (f:\libusb-1.0.20\examples):		test_hid(handle, endpoint_in);
+Xusb.c (f:\libusb-1.0.20\examples):		CALL_CHECK(test_mass_storage(handle, endpoint_in, endpoint_out));
+---- libusb_bulk_transfer Matches (21 in 5 files) ----
+Libcdrom.c (f:\libusb-1.0.20\libcdrom):	ret = libusb_bulk_transfer(handle, endpoint_in, (unsigned char*)&buffer, INQUIRY_LENGTH, &size, 1000);
+Libcdrom.c (f:\libusb-1.0.20\libcdrom):		ret = libusb_bulk_transfer(handle, endpoint_in, (unsigned char*)&buffer, INQUIRY_LENGTH, &size, 1000);
+Libcdrom.c (f:\libusb-1.0.20\libcdrom):		libusb_bulk_transfer(handle, endpoint_in, buffer, track_read_size, &size, 5000);
+Libcdrom.c (f:\libusb-1.0.20\libcdrom):	ret = libusb_bulk_transfer(handle, endpoint_in, (unsigned char*)&buffer, READ_CAPACITY_LENGTH, &size, 1000);
+Libcdrom.c (f:\libusb-1.0.20\libcdrom):	libusb_bulk_transfer(handle, endpoint_in, data, cdb[7]<<8|cdb[8], &size, 5000);
+Libcdrom.c (f:\libusb-1.0.20\libcdrom):		r = libusb_bulk_transfer(handle, endpoint, (unsigned char*)&cbw, 31, &size, 1000);
+Libcdrom.c (f:\libusb-1.0.20\libcdrom):		r = libusb_bulk_transfer(handle, endpoint, (unsigned char*)&csw, 13, &size, 1000);
+Libcdrom.c (f:\libusb-1.0.20\libcdrom):	rc = libusb_bulk_transfer(handle, endpoint_in, (unsigned char*)&sense, REQUEST_SENSE_LENGTH, &size, 1000);
+Libcdrom.c (f:\libusb-1.0.20\libcdrom):		printf("libusb_bulk_transfer failed: %s\n", libusb_error_name(rc));
+Libusb-1.0.def (f:\libusb-1.0.20\libusb):  libusb_bulk_transfer
+Libusb-1.0.def (f:\libusb-1.0.20\libusb):  libusb_bulk_transfer@24 = libusb_bulk_transfer
+Libusb.h (f:\libusb-1.0.20\libusb):int LIBUSB_CALL libusb_bulk_transfer(libusb_device_handle *dev_handle,
+Sync.c (f:\libusb-1.0.20\libusb):int API_EXPORTED libusb_bulk_transfer(struct libusb_device_handle *dev_handle,
+Xusb.c (f:\libusb-1.0.20\examples):		r = libusb_bulk_transfer(handle, endpoint, (unsigned char*)&cbw, 31, &size, 1000);
+Xusb.c (f:\libusb-1.0.20\examples):		r = libusb_bulk_transfer(handle, endpoint, (unsigned char*)&csw, 13, &size, 1000);
+Xusb.c (f:\libusb-1.0.20\examples):	rc = libusb_bulk_transfer(handle, endpoint_in, (unsigned char*)&sense, REQUEST_SENSE_LENGTH, &size, 1000);
+Xusb.c (f:\libusb-1.0.20\examples):		printf("libusb_bulk_transfer failed: %s\n", libusb_error_name(rc));
+Xusb.c (f:\libusb-1.0.20\examples):	CALL_CHECK(libusb_bulk_transfer(handle, endpoint_in, (unsigned char*)&buffer, INQUIRY_LENGTH, &size, 1000));
+Xusb.c (f:\libusb-1.0.20\examples):	CALL_CHECK(libusb_bulk_transfer(handle, endpoint_in, (unsigned char*)&buffer, READ_CAPACITY_LENGTH, &size, 1000));
+Xusb.c (f:\libusb-1.0.20\examples):	libusb_bulk_transfer(handle, endpoint_in, data, block_size, &size, 5000);
+---- libusb_control_transfer Matches (32 in 9 files) ----
+Core.c (f:\libusb-1.0.20\libusb):		r = libusb_control_transfer(dev, LIBUSB_ENDPOINT_IN,
+Dpfp.c (f:\libusb-1.0.20\examples):	r = libusb_control_transfer(devh, CTRL_IN, USB_RQ, 0xf0, 0, data,
+Dpfp.c (f:\libusb-1.0.20\examples):	r = libusb_control_transfer(devh, CTRL_IN, USB_RQ, 0x07, 0, status, 1, 0);
+Dpfp.c (f:\libusb-1.0.20\examples):	r = libusb_control_transfer(devh, CTRL_OUT, USB_RQ, 0x07, 0, &data, 1, 0);
+Dpfp.c (f:\libusb-1.0.20\examples):	r = libusb_control_transfer(devh, CTRL_OUT, USB_RQ, 0x4e, 0, &data, 1, 0);
+Dpfp_threaded.c (f:\libusb-1.0.20\examples):	r = libusb_control_transfer(devh, CTRL_IN, USB_RQ, 0xf0, 0, data,
+Dpfp_threaded.c (f:\libusb-1.0.20\examples):	r = libusb_control_transfer(devh, CTRL_IN, USB_RQ, 0x07, 0, status, 1, 0);
+Dpfp_threaded.c (f:\libusb-1.0.20\examples):	r = libusb_control_transfer(devh, CTRL_OUT, USB_RQ, 0x07, 0, &data, 1, 0);
+Dpfp_threaded.c (f:\libusb-1.0.20\examples):	r = libusb_control_transfer(devh, CTRL_OUT, USB_RQ, 0x4e, 0, &data, 1, 0);
+Ezusb.c (f:\libusb-1.0.20\examples):	status = libusb_control_transfer(device,
+Ezusb.c (f:\libusb-1.0.20\examples):	status = libusb_control_transfer(device,
+Ezusb.c (f:\libusb-1.0.20\examples):	status = libusb_control_transfer(device,
+Ezusb.c (f:\libusb-1.0.20\examples):	status = libusb_control_transfer(device,
+Libusb-1.0.def (f:\libusb-1.0.20\libusb):  libusb_control_transfer
+Libusb-1.0.def (f:\libusb-1.0.20\libusb):  libusb_control_transfer@32 = libusb_control_transfer
+Libusb.h (f:\libusb-1.0.20\libusb):int LIBUSB_CALL libusb_control_transfer(libusb_device_handle *dev_handle,
+Libusb.h (f:\libusb-1.0.20\libusb):	return libusb_control_transfer(dev, LIBUSB_ENDPOINT_IN,
+Libusb.h (f:\libusb-1.0.20\libusb):	return libusb_control_transfer(dev, LIBUSB_ENDPOINT_IN,
+Sync.c (f:\libusb-1.0.20\libusb):int API_EXPORTED libusb_control_transfer(libusb_device_handle *dev_handle,
+Windows_usb.c (f:\libusb-1.0.20\libusb\os):	r = libusb_control_transfer(dev_handle, LIBUSB_ENDPOINT_OUT |
+Xusb.c (f:\libusb-1.0.20\examples):	CALL_CHECK(libusb_control_transfer(handle, LIBUSB_ENDPOINT_IN|LIBUSB_REQUEST_TYPE_CLASS|LIBUSB_RECIPIENT_INTERFACE,
+Xusb.c (f:\libusb-1.0.20\examples):	CALL_CHECK(libusb_control_transfer(handle, LIBUSB_ENDPOINT_IN|LIBUSB_REQUEST_TYPE_CLASS|LIBUSB_RECIPIENT_INTERFACE,
+Xusb.c (f:\libusb-1.0.20\examples):	CALL_CHECK(libusb_control_transfer(handle, LIBUSB_ENDPOINT_IN|LIBUSB_REQUEST_TYPE_CLASS|LIBUSB_RECIPIENT_INTERFACE,
+Xusb.c (f:\libusb-1.0.20\examples):	CALL_CHECK(libusb_control_transfer(handle, LIBUSB_ENDPOINT_IN|LIBUSB_REQUEST_TYPE_CLASS|LIBUSB_RECIPIENT_INTERFACE,
+Xusb.c (f:\libusb-1.0.20\examples):	CALL_CHECK(libusb_control_transfer(handle, LIBUSB_ENDPOINT_OUT|LIBUSB_REQUEST_TYPE_CLASS|LIBUSB_RECIPIENT_INTERFACE,
+Xusb.c (f:\libusb-1.0.20\examples):	r = libusb_control_transfer(handle, LIBUSB_ENDPOINT_IN|LIBUSB_REQUEST_TYPE_CLASS|LIBUSB_RECIPIENT_INTERFACE,
+Xusb.c (f:\libusb-1.0.20\examples):	descriptor_size = libusb_control_transfer(handle, LIBUSB_ENDPOINT_IN|LIBUSB_REQUEST_TYPE_STANDARD|LIBUSB_RECIPIENT_INTERFACE,
+Xusb.c (f:\libusb-1.0.20\examples):		r = libusb_control_transfer(handle, LIBUSB_ENDPOINT_IN|LIBUSB_REQUEST_TYPE_CLASS|LIBUSB_RECIPIENT_INTERFACE,
+Xusb.c (f:\libusb-1.0.20\examples):		r = libusb_control_transfer(handle, LIBUSB_ENDPOINT_IN|LIBUSB_REQUEST_TYPE_CLASS|LIBUSB_RECIPIENT_INTERFACE,
+Xusb.c (f:\libusb-1.0.20\examples):		r = libusb_control_transfer(handle, (uint8_t)(LIBUSB_ENDPOINT_IN|LIBUSB_REQUEST_TYPE_VENDOR|os_fd[i].recipient),
+Xusb.c (f:\libusb-1.0.20\examples):		r = libusb_control_transfer(handle, (uint8_t)(LIBUSB_ENDPOINT_IN|LIBUSB_REQUEST_TYPE_VENDOR|os_fd[i].recipient),
+---- libusb_standard_request Matches (1 in 1 files) ----
+Libusb.h (f:\libusb-1.0.20\libusb):enum libusb_standard_request {
+---- libusb_class_code Matches (1 in 1 files) ----
+Libusb.h (f:\libusb-1.0.20\libusb):enum libusb_class_code {
+---- libusb_descriptor_type Matches (1 in 1 files) ----
+Libusb.h (f:\libusb-1.0.20\libusb):enum libusb_descriptor_type {
+---- libusb_transfer_type Matches (3 in 2 files) ----
+Core.c (f:\libusb-1.0.20\libusb):	enum libusb_transfer_type ep_type;
+Core.c (f:\libusb-1.0.20\libusb):	ep_type = (enum libusb_transfer_type) (ep->bmAttributes & 0x3);
+Libusb.h (f:\libusb-1.0.20\libusb):enum libusb_transfer_type {
+---- \t Matches (0 in 0 files) ----
+---- \t Matches (25 in 1 files) ----
+Xusb.c (f:\libusb-1.0.20\examples):			printf("\tSELECT pressed\n");
+Xusb.c (f:\libusb-1.0.20\examples):			printf("\tLEFT 3 pressed\n");
+Xusb.c (f:\libusb-1.0.20\examples):			printf("\tRIGHT 3 pressed\n");
+Xusb.c (f:\libusb-1.0.20\examples):			printf("\tSTART presed\n");
+Xusb.c (f:\libusb-1.0.20\examples):			printf("\tUP pressed\n");
+Xusb.c (f:\libusb-1.0.20\examples):			printf("\tRIGHT pressed\n");
+Xusb.c (f:\libusb-1.0.20\examples):			printf("\tDOWN pressed\n");
+Xusb.c (f:\libusb-1.0.20\examples):			printf("\tLEFT pressed\n");
+Xusb.c (f:\libusb-1.0.20\examples):			printf("\tLEFT 2 pressed\n");
+Xusb.c (f:\libusb-1.0.20\examples):			printf("\tRIGHT 2 pressed\n");
+Xusb.c (f:\libusb-1.0.20\examples):			printf("\tLEFT 1 pressed\n");
+Xusb.c (f:\libusb-1.0.20\examples):			printf("\tRIGHT 1 presed\n");
+Xusb.c (f:\libusb-1.0.20\examples):			printf("\tTRIANGLE pressed\n");
+Xusb.c (f:\libusb-1.0.20\examples):			printf("\tCIRCLE pressed\n");
+Xusb.c (f:\libusb-1.0.20\examples):			printf("\tCROSS pressed\n");
+Xusb.c (f:\libusb-1.0.20\examples):			printf("\tSQUARE pressed\n");
+Xusb.c (f:\libusb-1.0.20\examples):	printf("\tPS button: %d\n", input_report[4]);
+Xusb.c (f:\libusb-1.0.20\examples):	printf("\tLeft Analog (X,Y): (%d,%d)\n", input_report[6], input_report[7]);
+Xusb.c (f:\libusb-1.0.20\examples):	printf("\tRight Analog (X,Y): (%d,%d)\n", input_report[8], input_report[9]);
+Xusb.c (f:\libusb-1.0.20\examples):	printf("\tL2 Value: %d\tR2 Value: %d\n", input_report[18], input_report[19]);
+Xusb.c (f:\libusb-1.0.20\examples):	printf("\tL1 Value: %d\tR1 Value: %d\n", input_report[20], input_report[21]);
+Xusb.c (f:\libusb-1.0.20\examples):	printf("\tRoll (x axis): %d Yaw (y axis): %d Pitch (z axis) %d\n",
+Xusb.c (f:\libusb-1.0.20\examples):	printf("\tAcceleration: %d\n\n", (int8_t)(input_report[48]));

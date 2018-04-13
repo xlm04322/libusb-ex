@@ -1,0 +1,3 @@
+develop libusb_audio function
+refer ../examples/myusbaudio.c
+envelop jni refer ../libcdrom/
